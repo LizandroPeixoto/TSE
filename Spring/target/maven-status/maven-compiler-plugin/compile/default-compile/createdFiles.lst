@@ -1,0 +1,4 @@
+com\teste\tse\SpringSqlApplication.class
+com\teste\tse\repo\PessoasRepository.class
+com\teste\tse\controller\PessoasController.class
+com\teste\tse\model\Pessoas.class
