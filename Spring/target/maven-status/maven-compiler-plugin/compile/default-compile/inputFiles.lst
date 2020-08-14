@@ -1,4 +1,9 @@
-C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\model\Pessoas.java
-C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\repo\PessoasRepository.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\domain\Pessoa.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\service\mapper\AbstractMapper.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\service\PessoaService.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\repository\PessoaRepository.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\service\dto\PessoaDTO.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\service\mapper\PessoaMapper.java
 C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\SpringSqlApplication.java
-C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\controller\PessoasController.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\pessoa\service\impl\PessoaServiceImpl.java
+C:\Pessoal\Dropbox\CRUD\Spring\src\main\java\com\teste\crud\web\rest\PessoaResoucer.java

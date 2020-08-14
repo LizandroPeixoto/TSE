@@ -1,4 +1,12 @@
-com\teste\crud\controller\PessoasController.class
+com\teste\crud\pessoa\domain\Pessoa.class
 com\teste\crud\SpringSqlApplication.class
-com\teste\crud\model\Pessoas.class
-com\teste\crud\repo\PessoasRepository.class
+com\teste\crud\pessoa\service\dto\PessoaDTO$PessoaDTOBuilder.class
+com\teste\crud\pessoa\domain\Pessoa_.class
+com\teste\crud\pessoa\service\PessoaService.class
+com\teste\crud\pessoa\domain\Pessoa$PessoaBuilder.class
+com\teste\crud\pessoa\repository\PessoaRepository.class
+com\teste\crud\pessoa\service\mapper\PessoaMapper.class
+com\teste\crud\pessoa\service\mapper\AbstractMapper.class
+com\teste\crud\pessoa\service\dto\PessoaDTO.class
+com\teste\crud\pessoa\service\impl\PessoaServiceImpl.class
+com\teste\crud\web\rest\PessoaResoucer.class
