@@ -1,4 +1,4 @@
-package com.teste.tse.controller;
+package com.teste.crud.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.teste.tse.model.Pessoas;
-import com.teste.tse.repo.PessoasRepository;
+import com.teste.crud.model.Pessoas;
+import com.teste.crud.repo.PessoasRepository;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController

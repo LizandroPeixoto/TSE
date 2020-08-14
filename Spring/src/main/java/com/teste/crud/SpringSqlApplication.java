@@ -1,4 +1,4 @@
-package com.teste.tse;
+package com.teste.crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

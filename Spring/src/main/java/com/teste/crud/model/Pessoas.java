@@ -1,4 +1,4 @@
-package com.teste.tse.model;
+package com.teste.crud.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
