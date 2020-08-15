@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @Service
@@ -23,5 +24,19 @@ public class PessoaServiceImpl implements PessoaService {
         return pessoaMapper.entidadesParaDTOs(pessoas);
     }
 
+    @Override
+    public PessoaDTO salvarPessoa(PessoaDTO pessoa) {
+        if (Objects.isNull(pessoa))
+            throw new IllegalArgumentException("Objeto proposta afetação nula");
 
+        Pessoa pessoaSalvar = pessoaMapper.dtoParaEntidade(pessoa);
+        pessoaSalvar.setId(pessoa.getID());
+        pessoaSalvar.setNome(pessoa.getNome());
+        pessoaSalvar.setEmail(pessoa.getEmail());
+
+        pessoaRepository.save(pessoaSalvar);
+
+        return pessoaMapper.entidadeParaDTO(pessoaSalvar);
+
+    }
 }

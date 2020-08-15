@@ -1,19 +1,25 @@
 <div *ngIf="pessoa">
-  <div>
-    <label>Nome: </label> {{pessoa.nome}}
-  </div>
-  <div>
-    <label>Email: </label> {{pessoa.email}}
-  </div>
-  <div>
-    <label>Ativo: </label> {{pessoa.active}}
-  </div>
+  <div><label>Nome: </label> {{ pessoa.nome }}</div>
+  <div><label>Email: </label> {{ pessoa.email }}</div>
+  <div><label>Ativo: </label> {{ pessoa.active }}</div>
 
-  <span class="button is-small btn-primary" *ngIf='pessoa.active' (click)='updateActive(false)'>Inactive</span>
+  <span
+    class="button is-small btn-primary"
+    *ngIf="pessoa.active"
+    (click)="updateActive(false)"
+    >Inactive</span
+  >
 
-  <span class="button is-small btn-primary" *ngIf='!pessoa.active' (click)='updateActive(true)'>Active</span>
+  <span
+    class="button is-small btn-primary"
+    *ngIf="!pessoa.active"
+    (click)="updateActive(true)"
+    >Active</span
+  >
 
-  <span class="button is-small btn-danger" (click)='deletepessoa()'>Delete</span>
+  <span class="button is-small btn-danger" (click)="deletePessoa()"
+    >Delete</span
+  >
 
-  <hr/>
+  <hr />
 </div>

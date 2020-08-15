@@ -1,10 +1,35 @@
 <div style="padding: 20px;">
-  <h1 style="color: blue">{{title}}</h1>
-  <h3>{{description}}</h3>
+  <h1 style="color: blue;">{{ title }}</h1>
+  <h3>{{ description }}</h3>
   <nav>
-    <a routerLink="pessoa" class="btn btn-primary active" role="button" routerLinkActive="active">Listar</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Adicionar</a>
-    <a routerLink="findbyemail" class="btn btn-primary active" role="button" routerLinkActive="active">Pesquisar pelo email</a>
+    <a
+      routerLink="pessoa"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Listar</a
+    >
+    <a
+      routerLink="adicionar"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Adicionar</a
+    >
+    <a
+      routerLink="filtrar"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Pesquisar pelo email</a
+    >
+    <a
+      routerLink="upload"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Upload</a
+    >
   </nav>
   <router-outlet></router-outlet>
 </div>

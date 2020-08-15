@@ -13,5 +13,4 @@ public class PessoaDTO {
     private Integer ID;
     private String nome;
     private String email;
-    private Boolean active;
 }

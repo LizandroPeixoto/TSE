@@ -1,22 +1,21 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class PessoaService {
+  private baseUrl = "http://localhost:8080/api";
 
-  private baseUrl = 'http://localhost:8080/api/pessoas';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getPessoa(id: number): Observable<Object> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  getPessoa(): Observable<Object> {
+    return this.http.get(`${this.baseUrl}/todasPessoas`);
   }
 
   createPessoa(pessoa: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}` + `/create`, pessoa);
+    return this.http.post(`${this.baseUrl}` + `/criarPessoas`, pessoa);
   }
 
   updatePessoa(id: number, value: any): Observable<Object> {
@@ -24,7 +23,7 @@ export class PessoaService {
   }
 
   deletePessoa(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: "text" });
   }
 
   getPessoasList(): Observable<any> {
@@ -36,6 +35,8 @@ export class PessoaService {
   }
 
   deleteAll(): Observable<any> {
-    return this.http.delete(`${this.baseUrl}` + `/delete`, { responseType: 'text' });
+    return this.http.delete(`${this.baseUrl}` + `/delete`, {
+      responseType: "text",
+    });
   }
 }
