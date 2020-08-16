@@ -1,3 +1,4 @@
+import { TableModule } from "primeng/table";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
@@ -20,7 +21,13 @@ import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.componen
     SearchPessoasComponent,
     UploadComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TableModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

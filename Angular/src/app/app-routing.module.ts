@@ -7,7 +7,7 @@ import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   { path: "", redirectTo: "pessoa", pathMatch: "full" },
-  { path: "pessoa", component: PessoasListComponent },
+  { path: "listar", component: PessoasListComponent },
   { path: "adicionar", component: CreatePessoaComponent },
   { path: "filtrar", component: SearchPessoasComponent },
   { path: "upload", component: UploadComponent },
