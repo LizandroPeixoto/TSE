@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PessoaDTO {
-    private Integer ID;
+    private Integer id;
     private String nome;
     private String email;
 }

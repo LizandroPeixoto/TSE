@@ -11,24 +11,18 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "Pessoa", schema = "Pessoa")
+@Table(name = "pessoa", schema = "pessoa")
 public class Pessoa implements Serializable, Cloneable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Id")
-    private long id;
+    @SequenceGenerator(name = "pessoa_id_seq", sequenceName = "pessoa_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pessoa_id_seq")
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "nome")
     private String nome;
 
     @Column(name = "email")
     private String email;
-
-    @Column(name = "active")
-    private boolean active;
-
-    public  String getCodigo() {
-        return nome.trim();
-    }
 }
