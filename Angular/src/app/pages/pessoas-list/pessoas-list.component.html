@@ -1,0 +1,6 @@
+<h1>Relação de pessoas cadastradas</h1>
+<table BORDER="2">
+  <div *ngFor="let pessoa of pessoas | async" style="width: 300px;">
+    <pessoa-details [pessoa]="pessoa"></pessoa-details>
+  </div>
+</table>

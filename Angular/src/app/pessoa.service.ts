@@ -6,11 +6,11 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class PessoaService {
-  private baseUrl = "http://localhost:8080/api";
+  private baseUrl = "http://localhost:4200/api";
 
   constructor(private http: HttpClient) {}
 
-  getPessoa(): Observable<Object> {
+  getListaPessoas(): Observable<any> {
     return this.http.get(`${this.baseUrl}/todasPessoas`);
   }
 
@@ -22,21 +22,7 @@ export class PessoaService {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  deletePessoa(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: "text" });
-  }
-
-  getPessoasList(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
-  }
-
   getPessoasByEmail(email: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/email/${email}`);
-  }
-
-  deleteAll(): Observable<any> {
-    return this.http.delete(`${this.baseUrl}` + `/delete`, {
-      responseType: "text",
-    });
   }
 }

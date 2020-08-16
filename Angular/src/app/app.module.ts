@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { CreatePessoaComponent } from "./create-pessoa/create-pessoa.component";
-import { PessoaDetailsComponent } from "./pessoa-details/pessoa-details.component";
-import { PessoasListComponent } from "./pessoas-list/pessoas-list.component";
-import { SearchPessoasComponent } from "./search-pessoas/search-pessoas.component";
+import { CreatePessoaComponent } from "./pages/create-pessoa/create-pessoa.component";
+import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.component";
+import { SearchPessoasComponent } from "./pages/search-pessoas/search-pessoas.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
-import { UploadComponent } from "./upload/upload.component";
+import { UploadComponent } from "./pages/upload/upload.component";
+import { PessoaDetailsComponent } from "./pages/pessoa-details/pessoa-details.component";
 
 @NgModule({
   declarations: [

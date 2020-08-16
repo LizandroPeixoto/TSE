@@ -1,9 +1,10 @@
-import { NgModule } from "@angular/core";
+
 import { RouterModule, Routes } from "@angular/router";
-import { PessoasListComponent } from "./pessoas-list/pessoas-list.component";
-import { CreatePessoaComponent } from "./create-pessoa/create-pessoa.component";
-import { SearchPessoasComponent } from "./search-pessoas/search-pessoas.component";
-import { UploadComponent } from "./upload/upload.component";
+import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.component";
+import { CreatePessoaComponent } from "./pages/create-pessoa/create-pessoa.component";
+import { SearchPessoasComponent } from "./pages/search-pessoas/search-pessoas.component";
+import { UploadComponent } from "./pages/upload/upload.component";
+import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   { path: "", redirectTo: "pessoa", pathMatch: "full" },
