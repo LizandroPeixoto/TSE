@@ -4,12 +4,12 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { CreatePessoaComponent } from "./pages/create-pessoa/create-pessoa.component";
-import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.component";
 import { SearchPessoasComponent } from "./pages/search-pessoas/search-pessoas.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { UploadComponent } from "./pages/upload/upload.component";
-import { PessoaDetailsComponent } from "./pages/pessoa-details/pessoa-details.component";
+import { PessoaDetailsComponent } from "./pages/pessoa-details/PessoaDetailsComponent";
+import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.component";
 
 @NgModule({
   declarations: [

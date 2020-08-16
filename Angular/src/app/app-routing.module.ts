@@ -1,4 +1,3 @@
-
 import { RouterModule, Routes } from "@angular/router";
 import { PessoasListComponent } from "./pages/pessoas-list/pessoas-list.component";
 import { CreatePessoaComponent } from "./pages/create-pessoa/create-pessoa.component";
