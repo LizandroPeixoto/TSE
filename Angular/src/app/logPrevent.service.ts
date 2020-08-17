@@ -5,24 +5,24 @@ import { Observable } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
-export class PessoaService {
+export class LogPreventService {
   private baseUrl = "http://localhost:4200/api";
 
   constructor(private http: HttpClient) {}
 
-  getListaPessoas(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/todasPessoas`);
+  getListalogPrevents(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/todosLogs`);
   }
 
-  createPessoa(pessoa: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}` + `/criarPessoas`, pessoa);
+  createLogPrevent(logPrevent: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}` + `/criarLog`, logPrevent);
   }
 
-  updatePessoa(id: number, value: any): Observable<Object> {
+  updateLogPrevent(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  getPessoasByEmail(email: string): Observable<any> {
+  getLogPreventByEmail(email: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/email/${email}`);
   }
 }

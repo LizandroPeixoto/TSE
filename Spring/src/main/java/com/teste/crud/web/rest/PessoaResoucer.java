@@ -19,13 +19,13 @@ public class PessoaResoucer {
 
     private PessoaService pessoaService;
 
-    @GetMapping("/todasPessoas")
+    @GetMapping("/todosLogs")
     public ResponseEntity<List<PessoaDTO>> obterTodasPessoas() {
         List<PessoaDTO> tipoPessoaDTOS = pessoaService.obterTodasPessoas();
         return ResponseEntity.ok(tipoPessoaDTOS);
     }
 
-    @PostMapping("/criarPessoas")
+    @PostMapping("/criarLog")
     @ApiOperation(value = "Criar pessoa")
     public ResponseEntity<PessoaDTO> criarPessoa(@Valid @RequestBody PessoaDTO propostaAfetacao) {
         PessoaDTO propostaAfetacaoDTO = pessoaService.salvarPessoa(propostaAfetacao);

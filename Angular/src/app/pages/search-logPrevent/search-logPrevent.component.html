@@ -3,7 +3,14 @@
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="lastname">Email</label>
-      <input type="text" class="form-control" id="email" required [(ngModel)]="email" name="email">
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        required
+        [(ngModel)]="email"
+        name="email"
+      />
     </div>
     <div class="btn-group">
       <button type="submit" class="btn btn-success">Confirmar</button>
@@ -11,8 +18,8 @@
   </form>
 </div>
 <ul>
-  <li *ngFor="let pessoa of pessoas">
-    <h4>Nome: {{pessoa.nome}} </h4>
-    <h4>Email: {{pessoa.email}}</h4>
+  <li *ngFor="let logPrevent of logPrevent">
+    <h4>Nome: {{ logPrevent.nome }}</h4>
+    <h4>Email: {{ logPrevent.email }}</h4>
   </li>
 </ul>
