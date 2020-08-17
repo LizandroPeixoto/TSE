@@ -15,11 +15,10 @@ export class PessoasListComponent implements OnInit {
   constructor(private pessoaService: PessoaService) {}
 
   ngOnInit() {
-    this.pessoas = null;
-    this.listarPessoas();
+    this.reloadData();
   }
 
-  listarPessoas() {
+  reloadData() {
     this.pessoas = this.pessoaService.getListaPessoas();
   }
 }

@@ -1,5 +1,5 @@
 import { PessoaService } from "./../../pessoa.service";
-import { Pessoa } from "./../../models/pessoa";
+import { Pessoa } from "../../models/pessoa";
 import { OnInit, Input, Component } from "@angular/core";
 import { PessoasListComponent } from "../pessoas-list/pessoas-list.component";
 
