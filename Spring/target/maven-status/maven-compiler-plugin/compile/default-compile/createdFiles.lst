@@ -1,0 +1,12 @@
+com\teste\crud\SpringSqlApplication.class
+com\teste\crud\logPrevent\service\impl\logPreventServiceImpl.class
+com\teste\crud\logPrevent\service\logPreventService.class
+com\teste\crud\logPrevent\domain\LogPrevent_.class
+com\teste\crud\logPrevent\repository\logPreventRepository.class
+com\teste\crud\logPrevent\service\dto\logPreventDTO$logPreventDTOBuilder.class
+com\teste\crud\logPrevent\service\mapper\AbstractMapper.class
+com\teste\crud\web\rest\logPreventResoucer.class
+com\teste\crud\logPrevent\service\dto\logPreventDTO.class
+com\teste\crud\logPrevent\domain\LogPrevent$LogPreventBuilder.class
+com\teste\crud\logPrevent\domain\LogPrevent.class
+com\teste\crud\logPrevent\service\mapper\LogPreventMapper.class
