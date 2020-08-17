@@ -1,4 +1,4 @@
-package com.teste.crud.pessoa.service.mapper;
+package com.teste.crud.logPrevent.service.mapper;
 
 import org.springframework.data.domain.Page;
 

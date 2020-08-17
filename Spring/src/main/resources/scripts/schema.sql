@@ -1,26 +1,29 @@
 -- Esquemas
-CREATE SCHEMA IF NOT EXISTS pessoa
+CREATE SCHEMA IF NOT EXISTS LogPrevent
     AUTHORIZATION postgres;
 
 -- Tabela pessoa
-CREATE TABLE IF NOT EXISTS pessoa.pessoa
+CREATE TABLE IF NOT EXISTS LogPrevent.logPrevent
 (
     id integer NOT NULL,
-    nome character varying(255) NOT NULL,
-    email character varying(255) NOT NULL,
-    CONSTRAINT pessoa_pkey PRIMARY KEY (id)
+    data timestamp with time zone,
+    ip character(150) ,
+    request character(50) ,
+    status character(3) ,
+    user_agent character(255) ,
+    CONSTRAINT logPrevent_pkey PRIMARY KEY (id)
 );
 
-ALTER TABLE pessoa.pessoa
+ALTER TABLE logPrevent.logPrevent
     OWNER to postgres;
 
--- Sequence pessoa.pessoa
-CREATE SEQUENCE IF NOT EXISTS pessoa.pessoa_id_seq
+-- Sequence logPrevent.logPrevent
+CREATE SEQUENCE IF NOT EXISTS logPrevent.logPrevent_id_seq
     INCREMENT 1
     START 3
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
 
-ALTER SEQUENCE pessoa.pessoa_id_seq
+ALTER SEQUENCE logPrevent.logPrevent_id_seq
     OWNER TO postgres;
