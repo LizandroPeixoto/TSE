@@ -1,7 +1,7 @@
+import { CardModule } from "primeng/card";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-
 import { AppComponent } from "./app.component";
 import { CreateLogPreventComponent } from "./pages/create-logPrevent/create-logPrevent.component";
 import { SearchLogPreventComponent } from "./pages/search-logPrevent/search-logPrevent.component";
@@ -20,7 +20,13 @@ import { LogPreventListComponent } from "./pages/logPrevent-list/logPrevent-list
     SearchLogPreventComponent,
     UploadComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CardModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

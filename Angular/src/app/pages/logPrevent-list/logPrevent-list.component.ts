@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-
 import { LogPreventService } from "../../logPrevent.service";
 import { LogPrevent } from "../../models/logPrevent";
 

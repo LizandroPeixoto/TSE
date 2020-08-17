@@ -17,20 +17,4 @@ export class LogPreventDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {}
-
-  updateActive(isActive: boolean) {
-    this.logPreventService
-      .updateLogPrevent(this.logPrevent.id, {
-        name: this.logPrevent.nome,
-        email: this.logPrevent.email,
-        active: isActive,
-      })
-      .subscribe(
-        (data) => {
-          console.log(data);
-          this.logPrevent = data as LogPrevent;
-        },
-        (error) => console.log(error)
-      );
-  }
 }

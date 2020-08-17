@@ -21,9 +21,11 @@ export class LogPreventDetailsComponent implements OnInit {
   updateActive(isActive: boolean) {
     this.logPreventService
       .updateLogPrevent(this.logPrevent.id, {
-        name: this.logPrevent.nome,
-        email: this.logPrevent.email,
-        active: isActive,
+        ip: this.logPrevent.ip,
+        data: this.logPrevent.data,
+        request: this.logPrevent.request,
+        status: this.logPrevent.status,
+        user_agent: this.logPrevent.user_agent,
       })
       .subscribe(
         (data) => {

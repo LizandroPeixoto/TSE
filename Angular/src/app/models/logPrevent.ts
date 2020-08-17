@@ -1,6 +1,8 @@
 export class LogPrevent {
   id: number;
-  nome: string;
-  email: string;
-  active: boolean;
+  ip: string;
+  data: Date;
+  request: string;
+  status: string;
+  user_agent: string;
 }
