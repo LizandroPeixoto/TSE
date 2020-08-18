@@ -26,7 +26,8 @@ describe("logPreventListComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it("ngOnInit", () => {
+    component.ngOnInit();
     expect(component).toBeTruthy();
   });
 });
