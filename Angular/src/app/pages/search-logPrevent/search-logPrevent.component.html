@@ -2,14 +2,14 @@
 <div style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="lastname">Email</label>
+      <label for="lastname">Data</label>
       <input
         type="text"
         class="form-control"
-        id="email"
+        id="data"
         required
-        [(ngModel)]="email"
-        name="email"
+        [(ngModel)]="data"
+        name="data"
       />
     </div>
     <div class="btn-group">
@@ -19,7 +19,6 @@
 </div>
 <ul>
   <li *ngFor="let logPrevent of logPrevent">
-    <h4>Nome: {{ logPrevent.nome }}</h4>
-    <h4>Email: {{ logPrevent.email }}</h4>
+    <h4>Data: {{ logPrevent.data }}</h4>
   </li>
 </ul>

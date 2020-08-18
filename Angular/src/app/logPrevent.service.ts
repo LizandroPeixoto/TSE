@@ -17,12 +17,4 @@ export class LogPreventService {
   createLogPrevent(logPrevent: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}` + `/criarLog`, logPrevent);
   }
-
-  updateLogPrevent(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
-  }
-
-  getLogPreventByEmail(email: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/email/${email}`);
-  }
 }

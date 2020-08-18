@@ -1,24 +1,24 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
-import { LogPreventDetailsComponent } from "./LogPreventDetailsComponent";
-
+import {
+  HttpTestingController,
+  HttpClientTestingModule,
+} from "@angular/common/http/testing";
+import { TestBed } from "@angular/core/testing";
+import { LogPreventService } from "src/app/logPrevent.service";
 describe("LogPreventDetailsComponent", () => {
-  let component: LogPreventDetailsComponent;
-  let fixture: ComponentFixture<LogPreventDetailsComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [LogPreventDetailsComponent],
-    }).compileComponents();
-  }));
+  let httpMock: HttpTestingController;
+  let service: LogPreventService;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogPreventDetailsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [LogPreventService],
+    });
+
+    service = TestBed.get(LogPreventService);
+    httpMock = TestBed.get(HttpTestingController);
   });
 
   it("should create", () => {
-    expect(component).toBeTruthy();
+    expect(service).toBeTruthy();
   });
 });

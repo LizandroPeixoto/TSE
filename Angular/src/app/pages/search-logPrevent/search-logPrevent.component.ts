@@ -8,19 +8,19 @@ import { OnInit, Component } from "@angular/core";
   styleUrls: ["./search-logPrevent.component.css"],
 })
 export class SearchLogPreventComponent implements OnInit {
-  email: string;
+  data: string;
   logPrevent: LogPrevent[];
 
   constructor(private dataService: LogPreventService) {}
 
   ngOnInit() {
-    this.email = "";
+    this.data = "";
   }
 
   private searchLogPrevent() {
-    this.dataService
-      .getLogPreventByEmail(this.email)
-      .subscribe((logPrevent) => (this.logPrevent = logPrevent));
+    // this.dataService
+    //   .getLogPreventByEmail(this.email)
+    //   .subscribe((logPrevent) => (this.logPrevent = logPrevent));
   }
 
   onSubmit() {

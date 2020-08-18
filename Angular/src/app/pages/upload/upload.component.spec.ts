@@ -1,25 +1,32 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { LogPreventService } from "./../../logPrevent.service";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
+import { UploadComponent } from "./upload.component";
+import {
+  HttpTestingController,
+  HttpClientTestingModule,
+} from "@angular/common/http/testing";
+import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
-import { UploadComponent } from './upload.component';
-
-describe('UploadComponent', () => {
+describe("UploadComponent", () => {
   let component: UploadComponent;
   let fixture: ComponentFixture<UploadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UploadComponent ]
-    })
-    .compileComponents();
+      declarations: [UploadComponent],
+      imports: [HttpClientTestingModule, RouterModule, FormsModule],
+      providers: [LogPreventService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UploadComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
