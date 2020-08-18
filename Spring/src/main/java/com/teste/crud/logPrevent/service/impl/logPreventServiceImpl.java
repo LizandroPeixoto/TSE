@@ -27,20 +27,44 @@ public class logPreventServiceImpl implements logPreventService {
     }
 
     @Override
-    public logPreventDTO salvarLog(logPreventDTO pessoa) {
-        if (Objects.isNull(pessoa))
+    public List<logPreventDTO> obterTodosLogsporFiltro(String ip, String User_Agent) {
+        List<LogPrevent> logPrevents = logPreventRepository.obterTodosLogsporFiltro(ip, User_Agent);
+        return logPreventMapper.entidadesParaDTOs(logPrevents);
+    }
+
+    @Override
+    public logPreventDTO salvarLog(logPreventDTO logPrevent) {
+        if (Objects.isNull(logPrevent))
             throw new IllegalArgumentException("Objeto log nulo");
 
-        LogPrevent logPreventSalvar = logPreventMapper.dtoParaEntidade(pessoa);
-        logPreventSalvar.setId(pessoa.getId());
-        logPreventSalvar.setData(pessoa.getData());
-        logPreventSalvar.setIp(pessoa.getIp());
-        logPreventSalvar.setStatus(pessoa.getStatus());
-        logPreventSalvar.setUser_agent(pessoa.getUser_agent());
+        LogPrevent logPreventSalvar = logPreventMapper.dtoParaEntidade(logPrevent);
+        logPreventSalvar.setId(logPrevent.getId());
+        logPreventSalvar.setData(logPrevent.getData());
+        logPreventSalvar.setIp(logPrevent.getIp());
+        logPreventSalvar.setStatus(logPrevent.getStatus());
+        logPreventSalvar.setUser_agent(logPrevent.getUser_agent());
 
         logPreventRepository.save(logPreventSalvar);
 
         return logPreventMapper.entidadeParaDTO(logPreventSalvar);
 
+    }
+
+    @Override
+    public logPreventDTO salvarArquivoLog(List<logPreventDTO> logPreventList) {
+        if (Objects.isNull(logPreventList))
+            throw new IllegalArgumentException("Objeto log nulo");
+
+        logPreventList.forEach( logPreventLista -> {
+            LogPrevent logPreventSalvar = logPreventMapper.dtoParaEntidade(logPreventLista);
+            logPreventSalvar.setId(logPreventLista.getId());
+            logPreventSalvar.setData(logPreventLista.getData());
+            logPreventSalvar.setIp(logPreventLista.getIp());
+            logPreventSalvar.setStatus(logPreventLista.getStatus());
+            logPreventSalvar.setUser_agent(logPreventLista.getUser_agent());
+            logPreventRepository.save(logPreventSalvar);
+        });
+
+        return null;
     }
 }

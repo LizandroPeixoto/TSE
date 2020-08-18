@@ -3,6 +3,7 @@ import com.teste.crud.logPrevent.service.logPreventService;
 import com.teste.crud.logPrevent.service.dto.logPreventDTO;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,10 +26,24 @@ public class logPreventResoucer {
         return ResponseEntity.ok(tipoLogPreventDTOS);
     }
 
+    @GetMapping("/todosLogs/{ip}{User_Agent}{Hora}")
+    public ResponseEntity<List<logPreventDTO>> obtertodosLogsFiltro(@PathVariable String ip, @PathVariable String User_Agent) {
+        List<logPreventDTO> tipoLogPreventDTOS = logPreventService.obterTodosLogsporFiltro(ip, User_Agent);
+        return ResponseEntity.ok(tipoLogPreventDTOS);
+    }
+
     @PostMapping("/criarLog")
     @ApiOperation(value = "Criar log")
-    public ResponseEntity<logPreventDTO> criarPessoa(@Valid @RequestBody logPreventDTO propostaAfetacao) {
-        logPreventDTO logPreventDTO = logPreventService.salvarLog(propostaAfetacao);
+    public ResponseEntity<logPreventDTO> criarPessoa(@Valid @RequestBody logPreventDTO logPrevent) {
+        logPreventDTO logPreventDTO = logPreventService.salvarLog(logPrevent);
         return ResponseEntity.ok(logPreventDTO);
     }
+
+    @PostMapping("/gravarArquivo")
+    @ApiOperation(value = "Gravar Arquivo de log")
+    public ResponseEntity<logPreventDTO> criarPessoa(@Valid @RequestBody List<logPreventDTO>  arquivologPrevent) {
+        logPreventDTO logPreventDTO = logPreventService.salvarArquivoLog(arquivologPrevent);
+        return ResponseEntity.ok(logPreventDTO);
+    }
+
 }

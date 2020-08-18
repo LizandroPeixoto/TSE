@@ -1,15 +1,26 @@
-<h3>Procura pelo email</h3>
+<h3>Pesquisa</h3>
 <div style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="lastname">Data</label>
+      <label for="lastname">IP</label>
       <input
         type="text"
         class="form-control"
-        id="data"
+        id="ip"
         required
-        [(ngModel)]="data"
-        name="data"
+        [(ngModel)]="ip"
+        name="ip"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastname">User Agent</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ip"
+        required
+        [(ngModel)]="user_agent"
+        name="ip"
       />
     </div>
     <div class="btn-group">

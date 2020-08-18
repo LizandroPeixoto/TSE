@@ -17,4 +17,11 @@ export class LogPreventService {
   createLogPrevent(logPrevent: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}` + `/criarLog`, logPrevent);
   }
+
+  getListalogPreventsporFiltro(
+    ip: String,
+    user_agent: String
+  ): Observable<any> {
+    return this.http.get(`${this.baseUrl}/todosLogs/${ip}${user_agent}`);
+  }
 }
