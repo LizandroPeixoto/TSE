@@ -17,6 +17,9 @@ export class CreateLogPreventComponent implements OnInit {
   ngOnInit() {}
   adicionar() {
     console.log(this.logPrevent);
+    this.logPrevent.data = new Date(
+      this.logPrevent.data.toString().replace(" ", "T")
+    );
     this.logPreventService.createLogPrevent(this.logPrevent).subscribe(
       (data) => console.log(data),
       (error) => console.log(error)

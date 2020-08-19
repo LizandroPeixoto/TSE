@@ -1,6 +1,6 @@
-<h3>Relação de logPrevent cadastradas</h3>
-<table BORDER="2">
-  <div *ngFor="let logPrevent of logPrevent | async" style="width: 1000px;">
+<div style="padding-top: 10px; height: 50px;">
+  <h3>Relação de log cadastrados</h3>
+  <div class="card" *ngFor="let logPrevent of logPrevent | async">
     <logPrevent-details [logPrevent]="logPrevent"></logPrevent-details>
   </div>
-</table>
+</div>

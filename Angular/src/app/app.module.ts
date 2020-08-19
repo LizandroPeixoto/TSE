@@ -12,6 +12,7 @@ import { LogPreventDetailsComponent } from "./pages/logPrevent-details/logPreven
 import { LogPreventListComponent } from "./pages/logPrevent-list/logPrevent-list.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { RouterModule } from "@angular/router";
+import { ScrollPanelModule } from "primeng/scrollpanel";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RouterModule } from "@angular/router";
     HttpClientModule,
     CardModule,
     RouterTestingModule,
+    ScrollPanelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
