@@ -9,8 +9,8 @@ import java.util.List;
 @Repository(value = "logPrevent.logPreventRepository")
 public interface logPreventRepository extends JpaRepository<LogPrevent, Integer> {
 
-    @Query(value = "SELECT * from logPrevent  " +
+    @Query(value = "SELECT * from logPrevent.logPrevent  " +
             "WHERE  ip LIKE '%' || :ip || '%' " +
-            " AND user_agent '%' || :User_Agent || '%'  ", nativeQuery = true)
+            " AND user_agent LIKE '%' || :User_Agent || '%'  ", nativeQuery = true)
     List<LogPrevent>  obterTodosLogsporFiltro(String ip, String User_Agent);
 }
