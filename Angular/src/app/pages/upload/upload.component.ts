@@ -27,7 +27,6 @@ export class UploadComponent implements OnInit {
     }
   }
   leArquivo(arquivo: any) {
-    console.log(arquivo);
     const allTextLines = arquivo.split(/\r?\n|\r/);
     const headers = allTextLines[0].split("|");
     const lines = [];
@@ -42,9 +41,22 @@ export class UploadComponent implements OnInit {
         lines.push(tarr);
       }
     }
-    console.log(this.logPrevent);
+    this.gravarArquivoBanco();
   }
   gravarArquivo(arquivo: any) {
-    this.logPrevent.push(arquivo);
+    this.logPrevent.push({
+      data: arquivo[0].replace(" ", "T"),
+      ip: arquivo[1].replace('"', "").replace('"', ""),
+      request: arquivo[2].replace('"', "").replace('"', ""),
+      status: arquivo[3],
+      user_agent: arquivo[4].replace('"', "").replace('"', ""),
+    });
+  }
+  gravarArquivoBanco() {
+    console.log(this.logPrevent);
+    this.logPreventService.createLogPreventArquivo(this.logPrevent).subscribe(
+      (data) => console.log(data),
+      (error) => console.log(error)
+    );
   }
 }

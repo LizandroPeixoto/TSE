@@ -1,5 +1,5 @@
 export class LogPrevent {
-  id: number;
+  id?: number;
   ip: string;
   data: Date;
   request: string;
