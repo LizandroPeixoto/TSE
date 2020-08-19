@@ -1,8 +1,7 @@
 package com.teste.crud.logPrevent.service;
 import com.teste.crud.logPrevent.service.dto.logPreventDTO;
-import lombok.Data;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 import java.util.List;
 

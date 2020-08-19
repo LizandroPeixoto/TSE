@@ -26,7 +26,7 @@ public class logPreventResoucer {
         return ResponseEntity.ok(tipoLogPreventDTOS);
     }
 
-    @GetMapping("/todosLogs/{ip}{User_Agent}{Hora}")
+    @GetMapping("/todosLogsporFiltro/{ip}{User_Agent}")
     public ResponseEntity<List<logPreventDTO>> obtertodosLogsFiltro(@PathVariable String ip, @PathVariable String User_Agent) {
         List<logPreventDTO> tipoLogPreventDTOS = logPreventService.obterTodosLogsporFiltro(ip, User_Agent);
         return ResponseEntity.ok(tipoLogPreventDTOS);
@@ -34,14 +34,14 @@ public class logPreventResoucer {
 
     @PostMapping("/criarLog")
     @ApiOperation(value = "Criar log")
-    public ResponseEntity<logPreventDTO> criarPessoa(@Valid @RequestBody logPreventDTO logPrevent) {
+    public ResponseEntity<logPreventDTO> criarLog(@Valid @RequestBody logPreventDTO logPrevent) {
         logPreventDTO logPreventDTO = logPreventService.salvarLog(logPrevent);
         return ResponseEntity.ok(logPreventDTO);
     }
 
     @PostMapping("/gravarArquivo")
     @ApiOperation(value = "Gravar Arquivo de log")
-    public ResponseEntity<logPreventDTO> criarPessoa(@Valid @RequestBody List<logPreventDTO>  arquivologPrevent) {
+    public ResponseEntity<logPreventDTO> criarLogArquivo(@Valid @RequestBody List<logPreventDTO>  arquivologPrevent) {
         logPreventDTO logPreventDTO = logPreventService.salvarArquivoLog(arquivologPrevent);
         return ResponseEntity.ok(logPreventDTO);
     }

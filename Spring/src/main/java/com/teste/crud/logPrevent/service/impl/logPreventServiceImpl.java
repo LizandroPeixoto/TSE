@@ -1,5 +1,6 @@
 package com.teste.crud.logPrevent.service.impl;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teste.crud.logPrevent.domain.LogPrevent;
 import com.teste.crud.logPrevent.repository.logPreventRepository;
 import com.teste.crud.logPrevent.service.logPreventService;
@@ -15,6 +16,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Service
 @Slf4j
+@JsonFormat(pattern="yyyy-MM-dd' 'HH:mm:ss.SSSZ")
 public class logPreventServiceImpl implements logPreventService {
 
     private logPreventRepository logPreventRepository;

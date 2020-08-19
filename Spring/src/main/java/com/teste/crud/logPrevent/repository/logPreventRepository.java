@@ -6,11 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository(value = "logPrevent.logPreventRepository")
 public interface logPreventRepository extends JpaRepository<LogPrevent, Integer> {
 
-    @Query(value = "SELECT l from logprevent l  " +
-            "WHERE  l.ip LIKE '%' || :ip || '%' " +
-            " AND l.user_agent '%' || :User_Agent || '%'  ", nativeQuery = true)
+    @Query(value = "SELECT * from logPrevent  " +
+            "WHERE  ip LIKE '%' || :ip || '%' " +
+            " AND user_agent '%' || :User_Agent || '%'  ", nativeQuery = true)
     List<LogPrevent>  obterTodosLogsporFiltro(String ip, String User_Agent);
 }
