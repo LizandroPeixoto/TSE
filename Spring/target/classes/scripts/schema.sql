@@ -18,12 +18,12 @@ ALTER TABLE logPrevent.logPrevent
     OWNER to postgres;
 
 -- Sequence logPrevent.logPrevent
-CREATE SEQUENCE IF NOT EXISTS logPrevent.id_seq
+CREATE SEQUENCE IF NOT EXISTS logprevent.log_prevent_id_seq
     INCREMENT 1
     START 3
     MINVALUE 1
     MAXVALUE 2147483647
     CACHE 1;
 
-ALTER SEQUENCE logPrevent.id_seq
+ALTER SEQUENCE logprevent.log_prevent_id_seq
     OWNER TO postgres;
