@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS LogPrevent.logPrevent
 (
     id integer NOT NULL,
     data timestamp with time zone,
-    ip character(150) ,
+    ip character(20) ,
     request character(50) ,
     status character(3) ,
     user_agent character(255) ,

@@ -3,7 +3,6 @@ import com.teste.crud.logPrevent.service.logPreventService;
 import com.teste.crud.logPrevent.service.dto.logPreventDTO;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
